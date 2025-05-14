@@ -1,0 +1,422 @@
+[
+    {
+        "id": 1,
+        "question": "Ever since Harry Potter was a baby, he was known in the wizarding world as what?",
+        "answer": "The Boy Who Lived",
+        "wrong": [
+            "The Kid Who Survived",
+            "The Baby Who Beat The Dark Lord",
+            "The Scrawny Teenager"
+        ],
+        "book": 1,
+        "hint": "The name of the first chapter of the book."
+    },
+    {
+        "id": 2,
+        "question": "Mr. and Mrs. Dursely live at Number 4 what?",
+        "answer": "Privet Drive",
+        "wrong": [
+            "Private Drive",
+            "Privy Drive",
+            "Pirate Drive"
+        ],
+        "book": 1,
+        "hint": "Many readers pronounced it wrong for years before hearing the correct pronunciation."
+    },
+    {
+        "id": 3,
+        "question": "Gringotts bank is run by what?",
+        "answer": "Goblins",
+        "wrong": [
+            "Pixies",
+            "Ogres",
+            "Trolls"
+        ],
+        "book": 1,
+        "hint": "Known in many mythical stories as smart, devious creatures who will do anything for gold."
+    },
+    {
+        "id": 4,
+        "question": "What time did Harry and Draco schedule their wizards duel for?",
+        "answer": "Midnight",
+        "wrong": [
+            "Half Past 10",
+            "High Noon",
+            "The 12th Of Never"
+        ],
+        "book": 1,
+        "hint": "When the time switches from PM to AM."
+    },
+    {
+        "id": 5,
+        "question": "Who is the Man With Two Faces?",
+        "answer": "Professor Quirrel",
+        "wrong": [
+            "Professor Snape",
+            "Professor McGonagall",
+            "Fluffy The 3-Headed Dog"
+        ],
+        "book": 1,
+        "hint": "He teaches Defense Against The Dark Arts"
+    },
+    {
+        "id": 6,
+        "question": "Who nearly killed Harry while trying to save him?",
+        "answer": "Dobby",
+        "wrong": [
+            "Griphook",
+            "Peeves",
+            "Mr. Weasley's Car"
+        ],
+        "book": 2,
+        "hint": "He is a house elf."
+    },
+    {
+        "id": 7,
+        "question": "Where did Harry go on his first trip with Floo Powder?",
+        "answer": "Knockturn Alley",
+        "wrong": [
+            "Diagon Alley",
+            "Platform 9 and 3/4",
+            "Hogwarts"
+        ],
+        "book": 2,
+        "hint": "A place you wouldn't want to be seen."
+    },
+    {
+        "id": 8,
+        "question": "What came out of Ron's mouth after his curse on Malfoy backfired?",
+        "answer": "Slugs",
+        "wrong": [
+            "Snails",
+            "Escargot",
+            "Chicken Alfredo"
+        ],
+        "book": 2,
+        "hint": "Like snails, but worse."
+    },
+    {
+        "id": 9,
+        "question": "Why did Hermione have a mirror when she got petrified?",
+        "answer": "She knew the Basilisk doesn't kill you if you only see its reflection.",
+        "wrong": [
+            "She was on her way to a Hogwarts fashion show.",
+            "She wanted to see if she was a vampire.",
+            "She's the Hogwarts janitor and happened to find it on the floor."
+        ],
+        "book": 2,
+        "hint": "Big yellow eyes."
+    },
+    {
+        "id": 10,
+        "question": "What advice does Lockhart give Harry while they're answering his fan mail?",
+        "answer": "Celebrity is as celebrity does.",
+        "wrong": [
+            "A smile and a memory charm goes a long way.",
+            "Instead of doing something halfway and failing, let someone else do it all the way and then take the credit.",
+            "Fame and lying go hand in hand."
+        ],
+        "book": 2,
+        "hint": "Something about being famous."
+    },
+    {
+        "id": 11,
+        "question": "How many times did Wendelin the Weird allow herself to be caught by medieval witch hunters?",
+        "answer": "47",
+        "wrong": [
+            "48",
+            "43",
+            "44"
+        ],
+        "book": 3,
+        "hint": "In the high 40s."
+    },
+    {
+        "id": 12,
+        "question": "What did Professor Trelawney see in Harry's tea leaves?",
+        "answer": "The grim",
+        "wrong": [
+            "The gruel",
+            "The grotesque",
+            "The hippogriff"
+        ],
+        "book": 3,
+        "hint": "A black dog that means death."
+    },
+    {
+        "id": 13,
+        "question": "What guards the wizard prison, Azkaban?",
+        "answer": "Dementors",
+        "wrong": [
+            "A sphinx",
+            "Dragons",
+            "Hippogriffs"
+        ],
+        "book": 3,
+        "hint": "Tall black-hooded creatures."
+    },
+    {
+        "id": 14,
+        "question": "What broomstick did Harry get for Christmas?",
+        "answer": "Firebolt",
+        "wrong": [
+            "Thunderbolt",
+            "Nimbus 2002",
+            "Dragon's Tail"
+        ],
+        "book": 3,
+        "hint": "Something warm"
+    },
+    {
+        "id": 15,
+        "question": "What place do the residents of Hogsmeade claim is haunted?",
+        "answer": "The Shrieking Shack",
+        "wrong": [
+            "The Cackling Cafe",
+            "The Lifeless Lighthouse",
+            "The Mysterious Motel"
+        ],
+        "book": 3,
+        "hint": "The place Professor Lupin used to use to change into a werewolf."
+    },
+    {
+        "id": 16,
+        "question": "Who is the Hogwarts Champion?",
+        "answer": "Cedric Diggory",
+        "wrong": [
+            "Harry Potter",
+            "Viktor Krum",
+            "Fleur Delacour"
+        ],
+        "book": 4,
+        "hint": "A Hogwarts student."
+    },
+    {
+        "id": 17,
+        "question": "Who sent up the Dark Mark?",
+        "answer": "Barty Crouch Jr.",
+        "wrong": [
+            "Winky the House Elf",
+            "Harry Potter",
+            "Draco Malfoy"
+        ],
+        "book": 4,
+        "hint": "Most people thought he was dead at one point."
+    },
+    {
+        "id": 18,
+        "question": "What does S.P.E.W. stand for?",
+        "answer": "Society for the Promotion of Elfish Welfare",
+        "wrong": [
+            "Stop the Outrageous Abuse of Our Fellow Magical Creatures and Campaign for a Change in Their Legal Status",
+            "Social Pariahs and their Evolutionary Windmills",
+            "Stop Putting Elves to Work"
+        ],
+        "book": 4,
+        "hint": "Something about elves"
+    },
+    {
+        "id": 19,
+        "question": "What spell did Harry use in the first Triwizard Challenge?",
+        "answer": "Accio",
+        "wrong": [
+            "Crucio",
+            "Incendio",
+            "Lumos"
+        ],
+        "book": 4,
+        "hint": "Ends with io"
+    },
+    {
+        "id": 20,
+        "question": "What stands out about Voldemort's appearance both before and after his rebirth?",
+        "answer": "Snake slits for his nose",
+        "wrong": [
+            "Webbed hands and feet",
+            "Green eyes like Harry's",
+            "Long blonde hair"
+        ],
+        "book": 4,
+        "hint": "Something above the neck."
+    },
+    {
+        "id": 21,
+        "question": "What is the name of the secret society that fights against Voldemort?",
+        "answer": "The Order of the Phoenix",
+        "wrong": [
+            "The Order of the White Lotus",
+            "The Weird Sisters",
+            "The Gobstones Club"
+        ],
+        "book": 5,
+        "hint": "An order of something."
+    },
+    {
+        "id": 22,
+        "question": "Hagrid is gone for months because he is visiting?",
+        "answer": "Giants",
+        "wrong": [
+            "Werewolves",
+            "Dragons",
+            "3-Headed Dogs"
+        ],
+        "book": 5,
+        "hint": "Madam Maxime goes with him."
+    },
+    {
+        "id": 23,
+        "question": "Who is the Hogwarts High Inquisitor?",
+        "answer": "Professor Umbridge",
+        "wrong": [
+            "Professor Snape",
+            "Professor McGonagall",
+            "Professor Trelawney"
+        ],
+        "book": 5,
+        "hint": "It's a girl."
+    },
+    {
+        "id": 24,
+        "question": "What is Sirius Black's house elf's name?",
+        "answer": "Kreacher",
+        "wrong": [
+            "Krawler",
+            "Krampus",
+            "Kraken"
+        ],
+        "book": 5,
+        "hint": "Starts with Kr."
+    },
+    {
+        "id": 25,
+        "question": "Who prophesied about Voldemort and Harry Potter?",
+        "answer": "Sibyll Trelawney",
+        "wrong": [
+            "Severus Snape",
+            "Sirius Black",
+            "Fleur Delacour"
+        ],
+        "book": 5,
+        "hint": "Someone who later became a Hogwarts teacher."
+    },
+    {
+        "id": 26,
+        "question": "Who is Tom Riddle's mother?",
+        "answer": "Merope Gaunt",
+        "wrong": [
+            "Nagini",
+            "Bellatrix Lestrange",
+            "Hepzibah Smith"
+        ],
+        "book": 6,
+        "hint": "Her father and brother both spoke Parseltongue."
+    },
+    {
+        "id": 27,
+        "question": "Why didn't Tom Riddle like his name?",
+        "answer": "There are a lot of Toms",
+        "wrong": [
+            "It's a short, uninteresting name",
+            "It doesn't strike fear in people's hearts",
+            "It has only 3 letters in it"
+        ],
+        "book": 6,
+        "hint": "He told Professor Dumbledore when they first met."
+    },
+    {
+        "id": 28,
+        "question": "Who won the Felix Felicis?",
+        "answer": "Harry Potter",
+        "wrong": [
+            "Hermione Granger",
+            "Ron Weasley",
+            "Helga Hufflepuff"
+        ],
+        "book": 6,
+        "hint": "Starts with H"
+    },
+    {
+        "id": 29,
+        "question": "Who sealed the Unbreakable Vow?",
+        "answer": "Bellatrix Lestrange",
+        "wrong": [
+            "Severus Snape",
+            "Narcissa Malfoy",
+            "Draco Malfoy"
+        ],
+        "book": 6,
+        "hint": "A girl."
+    },
+    {
+        "id": 30,
+        "question": "Who did Sirius leave everything to in his will?",
+        "answer": "Harry Potter",
+        "wrong": [
+            "Albus Dumbledore",
+            "Kreacher",
+            "The Order of the Phoenix"
+        ],
+        "book": 6,
+        "hint": "A human."
+    },
+    {
+        "id": 31,
+        "question": "Who did Fleur Delacour marry?",
+        "answer": "Bill Weasley",
+        "wrong": [
+            "Viktor Krum",
+            "Roger Davies",
+            "Cornelius Fudge"
+        ],
+        "book": 7,
+        "hint": "Someone who went to school at Hogwarts."
+    },
+    {
+        "id": 32,
+        "question": "How many Potters left on Harry's last day at the Dursley's?",
+        "answer": "7",
+        "wrong": [
+            "8",
+            "9",
+            "10"
+        ],
+        "book": 7,
+        "hint": "Less than 10."
+    },
+    {
+        "id": 33,
+        "question": "Who drank the potion so Voldemort could put the locket inside the basin?",
+        "answer": "Kreacher",
+        "wrong": [
+            "Dobby",
+            "Winky",
+            "Hokey"
+        ],
+        "book": 7,
+        "hint": "A male house elf."
+    },
+    {
+        "id": 34,
+        "question": "Who's Patronus is a silver doe?",
+        "answer": "Severus Snape",
+        "wrong": [
+            "Sirius Black",
+            "Albus Dumbledore",
+            "Hermione Granger"
+        ],
+        "book": 7,
+        "hint": "Went to school around the same time as James Potter."
+    },
+    {
+        "id": 35,
+        "question": "What is the most powerful wand in the world called?",
+        "answer": "The Elder Wand",
+        "wrong": [
+            "The Master Wand",
+            "The Mystery Wand",
+            "The Phoenix Wand"
+        ],
+        "book": 7,
+        "hint": "People have been killing each other for a long time over this wand."
+    },
+]
