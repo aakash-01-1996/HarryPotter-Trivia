@@ -2,7 +2,7 @@
 //  HPTriviaApp.swift
 //  HPTrivia
 //
-//  Created by Aakash Ambodkar on 5/13/25.
+//  Created by Aakash Ambodkar
 //
 
 import SwiftUI
