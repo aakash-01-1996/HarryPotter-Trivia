@@ -14,6 +14,9 @@ struct ContentView: View {
     @State private var moveBackgroundImage = false
     @State private var animateViewsIn = false
     
+    @State private var showInstructions = false
+    @State private var showSettings = false
+    
     
     var body: some View {
         GeometryReader { geo in
@@ -81,7 +84,7 @@ struct ContentView: View {
                         VStack{
                             if animateViewsIn{
                                 Button {
-                                    // Show instructions screen
+                                    showInstructions.toggle()
                                 } label:  {
                                     Image(systemName: "info.circle")
                                         .font(.largeTitle)
@@ -89,6 +92,9 @@ struct ContentView: View {
                                         .shadow(radius: 5)
                                 }
                                 .transition(.offset(x: -geo.size.width/4))
+                                .sheet(isPresented: $showInstructions) {
+                                    Instructions()
+                                }
                             }
                         }.animation(.easeOut(duration: 0.7).delay(2.2), value: animateViewsIn)
  
@@ -125,6 +131,7 @@ struct ContentView: View {
                                 
                                 Button {
                                     // Settings button
+                                    showSettings.toggle()
                                 } label: {
                                     Image(systemName: "gearshape")
                                         .font(.largeTitle)
@@ -133,6 +140,9 @@ struct ContentView: View {
                                     
                                 }
                                 .transition(.offset(x: geo.size.width/4))
+                                .sheet(isPresented: $showSettings) {
+                                    Settings()
+                                }
                             }
                         }
                         .animation(.easeOut(duration: 0.7).delay(2.2), value: animateViewsIn)
