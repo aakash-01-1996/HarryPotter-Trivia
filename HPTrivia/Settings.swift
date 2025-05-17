@@ -26,6 +26,7 @@ struct Settings: View {
                     .font(.title)
                     .multilineTextAlignment(.center)
                     .foregroundColor(.black)
+                    .padding(.top)
                 
                 ScrollView {
                     LazyVGrid(columns: [GridItem(), GridItem()]) {
@@ -44,7 +45,10 @@ struct Settings: View {
                                         .shadow(radius: 1)
                                         .padding(3)
                                 }
+                                .onTapGesture {
+                                    books[i] = .inactive
                             }
+                                }
                             else if books[i] == .inactive {
                                 ZStack(alignment: .bottomTrailing) {
                                     Image("hp\(i+1)")
@@ -60,6 +64,9 @@ struct Settings: View {
                                         .shadow(radius: 1)
                                         .padding(3)
                                 }
+                                .onTapGesture {
+                                    books[i] = .active
+                            }
                             } else {
                                 ZStack {
                                     Image("hp\(i+1)")

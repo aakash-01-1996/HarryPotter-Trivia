@@ -15,6 +15,7 @@ struct ContentView: View {
     @State private var animateViewsIn = false
     
     @State private var showInstructions = false
+    @State private var showSettings = false
     
     
     var body: some View {
@@ -130,6 +131,7 @@ struct ContentView: View {
                                 
                                 Button {
                                     // Settings button
+                                    showSettings.toggle()
                                 } label: {
                                     Image(systemName: "gearshape")
                                         .font(.largeTitle)
@@ -138,6 +140,9 @@ struct ContentView: View {
                                     
                                 }
                                 .transition(.offset(x: geo.size.width/4))
+                                .sheet(isPresented: $showSettings) {
+                                    Settings()
+                                }
                             }
                         }
                         .animation(.easeOut(duration: 0.7).delay(2.2), value: animateViewsIn)
