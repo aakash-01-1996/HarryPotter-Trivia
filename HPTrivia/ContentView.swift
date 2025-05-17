@@ -16,6 +16,7 @@ struct ContentView: View {
     
     @State private var showInstructions = false
     @State private var showSettings = false
+    @State private var playGame = false
     
     
     var body: some View {
@@ -103,6 +104,7 @@ struct ContentView: View {
                             if animateViewsIn {
                                 Button {
                                     // Start new game
+                                    playGame.toggle()
                                 } label: {
                                     Text("Play")
                                         .font(.largeTitle)
@@ -120,6 +122,9 @@ struct ContentView: View {
                                     }
                                 }
                                 .transition(.offset(y:geo.size.height/3))
+                                .fullScreenCover(isPresented: $playGame) {
+                                    Gameplay()
+                                }
                             }
                         }
                         .animation(.easeOut(duration: 0.7).delay(2), value: animateViewsIn)
