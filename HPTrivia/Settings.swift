@@ -91,6 +91,7 @@ struct Settings: View {
                 .donebutton()
             }
         }
+        .foregroundColor(.black)
     }
 }
 
