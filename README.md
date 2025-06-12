@@ -1,2 +1,2 @@
-- Buildig Harry Potter Trivia App 
+- Building Harry Potter Trivia App 
 - Work in Progress.. 
