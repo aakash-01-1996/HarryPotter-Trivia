@@ -11,7 +11,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		0736EABA2DD4192700FD7C70 /* HPTrivia */ = {
+		07F7D21A2E3327BD00C43221 /* HPTrivia */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = HPTrivia;
 			sourceTree = "<group>";
@@ -32,7 +32,7 @@
 		0736EAAF2DD4192700FD7C70 = {
 			isa = PBXGroup;
 			children = (
-				0736EABA2DD4192700FD7C70 /* HPTrivia */,
+				07F7D21A2E3327BD00C43221 /* HPTrivia */,
 				0736EAB92DD4192700FD7C70 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,7 +61,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				0736EABA2DD4192700FD7C70 /* HPTrivia */,
+				07F7D21A2E3327BD00C43221 /* HPTrivia */,
 			);
 			name = HPTrivia;
 			packageProductDependencies = (
