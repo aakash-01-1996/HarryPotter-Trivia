@@ -155,7 +155,7 @@ struct ContentView: View {
                     }
                     .frame(width: geo.size.width)
                     
-                    Spacer()
+                    Spacer()                    
                 }
             }
             .frame(width: geo.size.width, height: geo.size.height)

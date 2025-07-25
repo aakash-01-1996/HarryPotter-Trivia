@@ -31,7 +31,7 @@ struct Instructions: View {
                         Text("Welcome to Harry Potter Trivia! In this game, you will be asked random questions from the HP books and you must guess the right answer or you will lose points!😱")
                             .padding([.horizontal, .bottom])
                         
-                        Text("Each question i worth 5 points, but if you guess a wrong answer, you lose 1 point")
+                        Text("Each question is worth 5 points, but if you guess a wrong answer, you lose 1 point")
                             .padding([.horizontal, .bottom])
                         
                         Text("If you are struggling with a question, there is an option to reveal a hint or reveal the book that book that answers the question. But beware! Using these also minuses 1 point each")
