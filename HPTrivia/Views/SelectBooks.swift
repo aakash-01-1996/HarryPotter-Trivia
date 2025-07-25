@@ -12,6 +12,15 @@ struct SelectBooks: View {
     @Environment(Game.self) private var game
     
     @State private var showTempAlert = false
+    var activeBooks: Bool {
+        for book in game.bookQuestions.books {
+            if book.status == .active {
+                return true
+            }
+        }
+        return false
+    }
+    
     var body: some View {
         ZStack {
             InfoBackgroundImage()
@@ -27,74 +36,46 @@ struct SelectBooks: View {
                     LazyVGrid(columns: [GridItem(), GridItem()]) {
                         ForEach(game.bookQuestions.books){ book in
                             if book.status == .active {
-                                ZStack(alignment: .bottomTrailing) {
-                                    Image(book.image)
-                                        .resizable()
-                                        .scaledToFit()
-                                        .shadow(radius: 7)
-                                    
-                                    Image(systemName: "checkmark.circle.fill")
-                                        .font(.largeTitle)
-                                        .imageScale(.medium)
-                                        .foregroundStyle(.green)
-                                        .padding(3)
-                                    
-                                }
+                                ActiveBook(book: book)
                                 .onTapGesture{
                                     game.bookQuestions.changeStatus(of: book.id, to: .inactive)
                                 }
                                 
                             } else if book.status == .inactive {
-                                ZStack(alignment: .bottomTrailing) {
-                                    Image(book.image)
-                                        .resizable()
-                                        .scaledToFit()
-                                        .shadow(radius: 7)
-                                        .overlay{
-                                            Rectangle().opacity(0.37)
-                                        }
-                                    
-                                    Image(systemName: "circle")
-                                        .font(.largeTitle)
-                                        .imageScale(.medium)
-                                        .foregroundStyle(.green.opacity(0.5))
-                                        .padding(3)
-                                }
-                                .onTapGesture{
-                                    game.bookQuestions.changeStatus(of: book.id, to: .active)
-                                }
+                                InactiveBook(book: book)
+                                    .onTapGesture{
+                                        game.bookQuestions.changeStatus(of: book.id, to: .active)
+                                    }
                                 
                             } else {
-                                ZStack {
-                                    Image(book.image)
-                                        .resizable()
-                                        .scaledToFit()
-                                        .shadow(radius: 7)
-                                        .overlay{
-                                            Rectangle().opacity(0.75)
-                                        }
-                                    
-                                    Image(systemName: "lock.fill")
-                                        .font(.largeTitle)
-                                        .imageScale(.large)
-                                        .shadow(color: .white, radius: 2)
-                                }
-                                .onTapGesture{
-                                    // in-app purchases
-                                    showTempAlert.toggle()
-                                    game.bookQuestions.changeStatus(of: book.id, to: .active)
-                                }
+                                LockedBook(book: book)
+                                    .onTapGesture{
+                                        // in-app purchases
+                                        showTempAlert.toggle()
+                                        game.bookQuestions.changeStatus(of: book.id, to: .active)
+                                    }
                             }
                         }
                     }
                     .padding()
                 }
+                if !activeBooks {
+                    Text("No Books Selected")
+                        .multilineTextAlignment(.center)
+                }
+                
                 Button("Done") {
                     dismiss()
                 }
-                .donebutton()
+                .font(.title)
+                .buttonStyle(.borderedProminent)
+                .tint(.brown.mix(with: .black, by: 0.2))
+                .foregroundStyle(.white)
+                .disabled(!activeBooks)
+
             }
         }
+        .interactiveDismissDisabled(!activeBooks)
         .alert("You purchased this book!", isPresented: $showTempAlert){
         }
     }
