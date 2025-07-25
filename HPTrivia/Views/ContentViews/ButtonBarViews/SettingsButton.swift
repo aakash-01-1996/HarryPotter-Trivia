@@ -28,11 +28,14 @@ struct SettingsButton: View {
                 }
                 .transition(.offset(x: geo.size.width/4))
                 .sheet(isPresented: $showSettings) {
-                    Settings()
+                    SelectBooks()
                 }
             }
         }
         .animation(.easeOut(duration: 0.7).delay(2.2), value: animateViewsIn)
+        .sheet(isPresented: $showSettings) {
+            SelectBooks()
+        }
     }
 }
 
