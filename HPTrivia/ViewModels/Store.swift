@@ -15,6 +15,10 @@ class Store {
     
     private var updates: Task<Void, Never>? = nil
     
+    init() {
+        updates = watchForUpdates()
+    }
+    
     // Load all products
     func loadProdcuts() async {
         do {
@@ -63,6 +67,32 @@ class Store {
     }
     
     // Check for purchased products
+    private func checkPurchased() async {
+        for product in products {
+            guard let status = await product.currentEntitlement else { continue }
+            
+            switch status {
+            case .unverified(let signedType, let verificationError):
+                print("Error on \(signedType): \(verificationError)")
+            
+            case .verified(let signedType):
+                if signedType.revocationDate == nil {
+                    purchased.insert(signedType.productID)
+                } else {
+                    purchased.remove(signedType.productID)
+                }
+            }
+        }
+    }
     
-    // Connect with App Store (pruchase & transaction)
+    // Connect with App Store (purchase & transaction)
+    private func watchForUpdates() -> Task<Void, Never> {
+        Task(priority: .background) {
+            for await _ in Transaction.updates {
+                await checkPurchased()
+            }
+        }
+    }
+        
+    
 }
