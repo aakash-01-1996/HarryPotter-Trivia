@@ -10,10 +10,9 @@ import AVKit
 
 struct ContentView: View {
     @State private var audioPlayer: AVAudioPlayer!
-    @State private var moveBackgroundImage = false
+    @State private var playGame = false
     @State private var animateViewsIn = false
     
-
     var body: some View {
         GeometryReader { geo in
             ZStack {
@@ -26,7 +25,7 @@ struct ContentView: View {
                     RecentScores(animateViewsIn: $animateViewsIn)
                     Spacer()
                     
-                    ButtonBar(animateViewsIn: $animateViewsIn, geo: geo)
+                    ButtonBar(animateViewsIn: $animateViewsIn, playGame: $playGame, geo: geo)
                     .frame(width: geo.size.width)
                     
                     Spacer()
@@ -37,7 +36,16 @@ struct ContentView: View {
         .ignoresSafeArea()
         .onAppear {
             animateViewsIn = true
-//                playAudio()
+                playAudio()
+        }
+        .fullScreenCover(isPresented: $playGame) {
+            GamePlay()
+                .onAppear {
+                    audioPlayer.setVolume(0, fadeDuration: 2)
+                }
+                .onDisappear{
+                    audioPlayer.setVolume(1, fadeDuration: 3)
+                }
         }
     }
     
@@ -45,7 +53,7 @@ struct ContentView: View {
         let sound = Bundle.main.path(forResource: "magic-in-the-air", ofType: "mp3")
         audioPlayer = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
         audioPlayer.numberOfLoops = -1
-        audioPlayer.play()
+//        audioPlayer.play()
         
     }
 }

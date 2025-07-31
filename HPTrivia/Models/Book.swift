@@ -11,9 +11,10 @@ struct Book: Identifiable {
     let questions: [Question]
     var status: BookStatus 
     
-    enum BookStatus {
-        case active
-        case inactive
-        case locked
-    }
+    
+}
+enum BookStatus {
+    case active
+    case inactive
+    case locked
 }
