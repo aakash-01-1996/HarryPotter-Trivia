@@ -20,7 +20,7 @@ class Store {
     }
     
     // Load all products
-    func loadProdcuts() async {
+    func loadProducts() async {
         do {
             products = try await Product.products(for: ["hp4", "hp5", "hp6", "hp7"])
             products.sort {

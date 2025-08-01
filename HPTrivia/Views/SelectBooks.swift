@@ -10,8 +10,6 @@ import SwiftUI
 struct SelectBooks: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(Game.self) private var game
-    
-    @State private var showTempAlert = false
     private var store = Store()
     
     var activeBooks: Bool {
@@ -37,12 +35,14 @@ struct SelectBooks: View {
                 ScrollView {
                     LazyVGrid(columns: [GridItem(), GridItem()]) {
                         ForEach(game.bookQuestions.books){ book in
-                            if book.status == .active {
+                            if book.status == .active || (book.status == .locked && store.purchased.contains(book.image))  {
                                 ActiveBook(book: book)
-                                .onTapGesture{
+                                    .task{
+                                        game.bookQuestions.changeStatus(of: book.id, to: .active)
+                                    }
+                                    .onTapGesture{
                                     game.bookQuestions.changeStatus(of: book.id, to: .inactive)
                                 }
-                                
                             } else if book.status == .inactive {
                                 InactiveBook(book: book)
                                     .onTapGesture{
@@ -52,9 +52,11 @@ struct SelectBooks: View {
                             } else {
                                 LockedBook(book: book)
                                     .onTapGesture{
-                                        // in-app purchases
-                                        showTempAlert.toggle()
-                                        game.bookQuestions.changeStatus(of: book.id, to: .active)
+                                        let product = store.products[book.id-4]
+                                        
+                                        Task {
+                                             await store.purchase(product)
+                                        }
                                     }
                             }
                         }
@@ -78,10 +80,8 @@ struct SelectBooks: View {
             }
         }
         .interactiveDismissDisabled(!activeBooks)
-        .alert("You purchased this book!", isPresented: $showTempAlert){
-        }
         .task {
-            await store.loadProdcuts()
+            await store.loadProducts()
         }
     }
 }
