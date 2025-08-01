@@ -19,6 +19,7 @@ class Game {
     var answeredQuestions: [Int] = []
     var answers: [String] = []
     var currentQuestion = try! JSONDecoder().decode([Question].self, from: Data(contentsOf: Bundle.main.url(forResource: "trivia", withExtension: "json")!))[0]
+    
     let savePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appending(path: "RecentScores")
     
     init() {

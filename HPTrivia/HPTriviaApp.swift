@@ -21,14 +21,14 @@ struct HPTriviaApp: App {
 
 /***
  App Dev Plan: 
- - Game Intro screen
- - Gameplay screen
- - Game Logic (questions, scores, etc)
- - Celebration
- - Audio
- - Animation
- - In-app purchases
- - Instrcutions screen
- - Books
- - Persist scores
+ - Game Intro screen -> Done
+ - Gameplay screen -> Done
+ - Game Logic (questions, scores, etc) -> Done
+ - Celebration -> Done
+ - Audio -> Done
+ - Animation -> Done
+ - In-app purchases -> Done
+ - Instrcutions screen -> Done
+ - Books -> Done
+ - Persist scores -> Done
  */
