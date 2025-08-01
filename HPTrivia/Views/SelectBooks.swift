@@ -69,6 +69,8 @@ struct SelectBooks: View {
                 }
                 
                 Button("Done") {
+                    game.bookQuestions.saveStatus()
+                    
                     dismiss()
                 }
                 .font(.title)
