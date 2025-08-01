@@ -319,7 +319,7 @@ struct GamePlay: View {
                     }
                     
                     DispatchQueue.main.asyncAfter(deadline: .now() + 1.2){
-//                        playMusic()
+                        playMusic()
                     }
                 }
     }

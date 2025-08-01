@@ -81,7 +81,7 @@ struct SelectBooks: View {
 
             }
         }
-        .interactiveDismissDisabled(!activeBooks)
+        .interactiveDismissDisabled()
         .task {
             await store.loadProducts()
         }
